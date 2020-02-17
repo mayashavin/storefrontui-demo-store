@@ -1,12 +1,56 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <sf-header 
+      :title="title" 
+      :logo="logo"
+      cart-icon="empty_cart" 
+      wishlist-icon="heart" 
+      account-icon="profile"
+      active-icon="account"
+      :has-mobile-search="hasMobileSearch"
+      :search-placeholder="searchPlaceholder"
+    >
+      <template #navigation>
+        <SfHeaderNavigationItem
+          v-for="(route, index) in routes"
+          :key="index"
+        >
+          <router-link :to="route.link">{{route.title}}</router-link>
+        </SfHeaderNavigationItem>
+      </template>
+    </sf-header>
     <router-view/>
   </div>
 </template>
+<script>
+import { SfHeader } from '@storefront-ui/vue';
+
+export default {
+  components: { SfHeader },
+  data() {
+    return {
+      title: 'My store',
+      logo: {
+        mobile: {
+          url: "https://res.cloudinary.com/mayashavin/image/upload/v1539936657/mayashavin/rainbow.png"
+        },
+        desktop: {
+          url: "https://res.cloudinary.com/mayashavin/image/upload/v1539936657/mayashavin/rainbow.png"
+        }
+      },
+      hasMobileSearch: false,
+      searchPlaceholder: 'Search through my store',
+      routes: [{
+        title: 'Home',
+        link: '/'
+      }, {
+        title: 'Products',
+        link: '/products'
+      }]
+    }
+  }  
+}
+</script>
 
 <style lang="scss">
 #app {
