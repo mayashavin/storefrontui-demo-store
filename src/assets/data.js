@@ -1016,3 +1016,29 @@ export const data = [{
     "color": "orange"
   },
 ];
+
+export const heroBanners = [
+  {
+    title: "Smashing Super Mario",
+    subtitle: "SUMMER COLLECTION 2019",
+    buttonText: "Learn more",
+    background: "#efebe9",
+    image: "https://res.cloudinary.com/mayashavin/image/upload/v1581977722/workshop2019/SuperMario_running.png",
+    class: 'sf-hero-item--position-bg-top-right'
+  },
+  {
+    title: "Summer adventure unlocked with Super Mario",
+    buttonText: "Learn more",
+    subtitle: "SUMMER COLLECTION 2019",
+    class:"sf-hero-item--position-bg-bottom-right sf-hero-item--align-right",
+    image: "https://res.cloudinary.com/mayashavin/image/upload/v1581977722/workshop2019/SuperMario_running.png"
+  },
+  {
+    title: "Are you ready for some fun?",
+    subtitle: "SUMMER COLLECTION 2019",
+    buttonText: "Learn more",
+    background: "#fce4ec",
+    image: "https://res.cloudinary.com/mayashavin/image/upload/v1581977707/workshop2019/super-mario-png-super-mario-by-mintenndo-d62lh70-png-1147.png",
+    class: 'sf-hero-item--position-bg-top-left'
+  }
+];
