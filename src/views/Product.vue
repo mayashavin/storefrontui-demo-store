@@ -219,7 +219,7 @@ export default {
     padding: 0 $spacer-big;
     
     @include for-desktop {
-      margin-left: auto calc($spacer-big * 5);
+      margin-left: auto calc(#{$spacer-big} * 5);
     }
   }
 
@@ -254,7 +254,7 @@ export default {
 
   &__action {
     display: flex;
-    margin: $spacer-big 0 calc($spacer-big / 2);
+    margin: $spacer-big 0 calc(#{$spacer-big} / 2);
     @include for-desktop {
       justify-content: flex-end;
     }
@@ -272,7 +272,7 @@ export default {
     margin-bottom: $spacer-big;
   }
   &__description {
-    margin: $spacer-extra-big 0 calc($spacer-big * 3) 0;
+    margin: $spacer-extra-big 0 calc(#{$spacer-big} * 3) 0;
     font-family: $body-font-family-secondary;
     font-size: $font-size-regular-mobile;
     line-height: 1.6;
@@ -329,7 +329,7 @@ export default {
   &__sub-price {
     flex-basis: 100%;
     text-align: left;
-    margin-top: calc($spacer-big / 4);
+    margin-top: calc(#{$spacer-big} / 4);
     @include for-desktop {
       flex-basis: auto;
       margin-top: .625rem;
@@ -357,7 +357,7 @@ export default {
   &__tabs {
     margin-top: $spacer-big;
     @include for-desktop {
-      margin-top: calc(5 * $spacer-big);
+      margin-top: calc(5 * #{$spacer-big});
     }
     p {
       margin: 0;
