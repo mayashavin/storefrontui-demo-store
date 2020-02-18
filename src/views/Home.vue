@@ -21,7 +21,7 @@
           :image="product.images[0]"
           :title="product.name"
           :link="`/products/${product.id}`"
-          :regular-price="product.price"
+          :regular-price="`$${product.price}`"
           :score-rating="getRatings(product.ratings)"
           class="products__list-item"
         />

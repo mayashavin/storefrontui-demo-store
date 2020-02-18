@@ -18,7 +18,7 @@
               />
               <div class="product-details__sub">
                 <SfPrice
-                  regular="$50.00"
+                  :regular="`$${product.price}`"
                   class="sf-price--big product-details__sub-price"
                 />
                 <div class="product-details__sub-rating">
