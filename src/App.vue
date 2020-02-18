@@ -23,8 +23,7 @@
     <router-view/>
     <sf-footer 
       :column="column" 
-      :multiple="multiple" 
-      style="max-width: 64rem; margin-left: auto; margin-right: auto"
+      style="max-width: 64rem; margin-left: auto; margin-right: auto; width: 100%;"
     >  
       <sf-footer-column title="About us">
         <sf-list>
@@ -124,7 +123,8 @@ export default {
       }],
       isMobile: false,
       desktopMin: 1024,
-      year: (new Date()).getFullYear()
+      year: (new Date()).getFullYear(),
+      column: 3,
     }
   },
   computed: {
@@ -154,12 +154,19 @@ export default {
 </script>
 
 <style lang="scss">
+html, body, #app {
+  height: 100%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #nav {

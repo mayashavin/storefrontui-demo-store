@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="products">
     <h2>Products</h2>
     <div class="products__list">
       <sf-product-card
@@ -7,7 +7,7 @@
         :key="product.id"
         :image="product.images[0]"
         :title="product.name"
-        :link="`/products/product.id`"
+        :link="`/products/${product.id}`"
         :regular-price="product.price"
         :score-rating="getRatings(product.ratings)"
         :showAddToCartButton="showAddToCartButton"
@@ -57,6 +57,10 @@ export default {
 }
 </script>
 <style scoped>
+.products {
+  margin-top: 1rem;
+}
+
 .products__list {
   display: flex;
   flex-wrap: wrap;
