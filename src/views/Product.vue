@@ -27,7 +27,7 @@
                     Read all {{product.reviews.length}} review{{product.reviews.length > 0 ? 's' : ''}}
                   </div>
                   <div class="product-details__sub-reviews mobile-only">
-                    (1)
+                    {{product.reviews.length}}
                   </div>
                 </div>
               </div>
