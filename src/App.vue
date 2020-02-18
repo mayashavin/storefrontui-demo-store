@@ -9,6 +9,7 @@
       active-icon="account"
       :has-mobile-search="hasMobileSearch"
       :search-placeholder="searchPlaceholder"
+      class="header_container"
     >
       <template #navigation>
         <SfHeaderNavigationItem
@@ -87,10 +88,10 @@ export default {
       title: 'My store',
       logo: {
         mobile: {
-          url: "https://res.cloudinary.com/mayashavin/image/upload/v1539936657/mayashavin/rainbow.png"
+          url: "https://res.cloudinary.com/mayashavin/image/upload/w_50,ar_1:1,c_fill,g_auto/v1581977707/workshop2019/super-mario-png-super-mario-by-mintenndo-d62lh70-png-1147.png"
         },
         desktop: {
-          url: "https://res.cloudinary.com/mayashavin/image/upload/v1539936657/mayashavin/rainbow.png"
+          url: "https://res.cloudinary.com/mayashavin/image/upload/w_70,ar_1:1,c_fill,g_auto/v1581977707/workshop2019/super-mario-png-super-mario-by-mintenndo-d62lh70-png-1147.png"
         }
       },
       hasMobileSearch: false,
@@ -175,6 +176,12 @@ export default {
 }
 </style>
 <style lang="scss">
+.header_container {
+  .sf-header__logo {
+    height: auto;
+  }
+}
+
 .footer__info {
   padding: 0.5rem 0;
 }

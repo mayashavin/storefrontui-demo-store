@@ -13,7 +13,7 @@
       />
     </sf-hero>
     <div class="highlights__container">
-      <h2 class="highlights__title">Highlights of the day</h2>
+      <sf-heading title="Highlights of the day" class="highlights__title"/>
       <sf-carousel :options="options" class="highlights-list">
         <sf-product-card
           v-for="product in highlights"
@@ -32,7 +32,7 @@
 
 <script>
 // @ is an alias to /src
-import { SfHero, SfCarousel, SfProductCard } from '@storefront-ui/vue';
+import { SfHero, SfCarousel, SfProductCard, SfHeading } from '@storefront-ui/vue';
 import { heroBanners, data } from '@/assets/data';
 
 export default {
@@ -40,7 +40,8 @@ export default {
   components: {
     SfHero,
     SfCarousel,
-    SfProductCard
+    SfProductCard,
+    SfHeading
   },
   data() {
     return {
@@ -81,8 +82,6 @@ export default {
 .highlights__title {
   border-top: 1px solid #efebea;
   border-bottom: 1px solid #efebea;
-  padding: 1rem 0px;
-  font-size: 1.2rem;
-  font-weight: 600;
+  padding: 1rem;
 }
 </style>
