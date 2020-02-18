@@ -51,29 +51,37 @@
           </sf-list-item>            
         </sf-list>
       </sf-footer-column>
-      <!-- <sf-footer-column title="Social" style="margin-left: auto">
-        <div :style="style">
-          <img 
-            v-for="item in social" 
-            :key="item"
-            :src="'/assets/storybook/SfFooter/'+item+'.svg'" 
-            style="height: 0.75rem; margin-right: 1.25rem"
-          />
-        </div>
-      </sf-footer-column> -->
+      <sf-footer-column title="Social">
+        <sf-list class="footer__column__socials">
+          <a v-for="(item, index) in social" 
+            :key="index"
+            :href="item.link"
+            target="_blank"
+            class="footer__column__social-item"
+          >
+            <sf-icon 
+              :icon="item.icon.paths[0]"
+              :view-box="item.icon.viewBox"
+              :color="item.color"
+              size="xs"
+            />
+          </a>
+        </sf-list>
+      </sf-footer-column>
     </sf-footer>
     <div class="bg-light footer__info">
-      Designed by <a href="https://twitter.com/mayashavin" target="_blank">Maya</a> - 
+      Developed by <a href="https://twitter.com/mayashavin" target="_blank">Maya</a> - 
       Powered by <a href="https://storefrontui.io" target="_blank">StorefrontUI</a>
       in {{year}}
     </div>
   </div>
 </template>
 <script>
-import { SfHeader, SfFooter, SfList, SfMenuItem } from '@storefront-ui/vue';
+import { SfHeader, SfFooter, SfList, SfMenuItem, SfIcon } from '@storefront-ui/vue';
+import { github, facebook, twitter } from './assets/icons';
 
 export default {
-  components: { SfHeader, SfFooter, SfList, SfMenuItem },
+  components: { SfHeader, SfFooter, SfList, SfMenuItem, SfIcon },
   data() {
     return {
       title: 'My store',
@@ -97,7 +105,22 @@ export default {
       active: '/',
       aboutUs: ["Who we are", "Quality in the details", "Customer Reviews"],
       paymentsDelivery: ["Purchase terms", "Guarantee"],
-      social: ["facebook", "pinterest", "twitter", "youtube"],
+      social: [{
+        icon: facebook,
+        color: "#3578E5",
+        title: 'Facebook',
+        link: 'https://facebook.com/mayashavin'
+      }, {
+        icon: github,
+        color: "black",
+        title: 'Github',
+        link: 'https://github.com/Divanteltd/storefront-ui'
+      }, {
+        icon: twitter,
+        color: "rgb(29, 161, 242)",
+        title: 'Twitter',
+        link: 'https://twitter.com/StorefrontUI'
+      }],
       isMobile: false,
       desktopMin: 1024,
       year: (new Date()).getFullYear()
@@ -150,8 +173,21 @@ export default {
     }
   }
 }
-
+</style>
+<style lang="scss">
 .footer__info {
   padding: 0.5rem 0;
+}
+
+.footer__column__socials {
+  display: flex;
+}
+
+.footer__column__social-item {
+  margin-right: 0.5rem;
+
+  &:not(:first-child) {
+    margin-left: 0.5rem;
+  }
 }
 </style>

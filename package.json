@@ -7,6 +7,18 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "vue": {
+    "pwa": {
+      "name": "Smashing Mario Store",
+      "iconPaths": {
+        "favicon32": "https://res.cloudinary.com/mayashavin/image/upload/w_32,h_32,c_scale/v1582018976/workshop2019/mushroom.png",
+        "favicon16": "https://res.cloudinary.com/mayashavin/image/upload/w_16,h_16,c_scale/v1582018976/workshop2019/mushroom.png",
+        "appleTouchIcon": "https://res.cloudinary.com/mayashavin/image/upload/w_512,h_512,c_scale/v1582018976/workshop2019/mushroom.png",
+        "maskIcon": "https://res.cloudinary.com/mayashavin/image/upload/v1582018976/workshop2019/mushroom.png",
+        "msTileImage": "https://res.cloudinary.com/mayashavin/image/upload/w_144,h_144,c_scale/v1582018976/workshop2019/mushroom.png"
+      }
+    }
+  },
   "dependencies": {
     "@storefront-ui/vue": "^0.5.1",
     "core-js": "^3.6.4",
